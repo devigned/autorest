@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in ms_rest_azure.gemspec
 gemspec
 
 group :development, :local, :test do
@@ -9,5 +8,5 @@ group :development, :local, :test do
   gem 'concurrent-ruby-ext'
   gem 'faraday'
   gem 'faraday-cookie_jar'
-  gem 'ms_rest'
+  gem 'ms_rest', path: '../ms-rest'  # use this for local development
 end

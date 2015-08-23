@@ -21,13 +21,13 @@ module MsRest
     # @param token_provider [TokenProvider] the token provider.
     # @param token [String] the token.
     def initialize(*args)
-      if (args.size == 1)
+      if args.size == 1
         if args[0].is_a?(TokenProvider)
           @token_provider = args[0]
         else
           @token_provider = StringTokenProvider.new args[0], DEFAULT_SCHEME
         end
-      elsif (args.size == 2)
+      elsif args.size == 2
         token = args[0]
         token_type = args[0]
         @token_provider = StringTokenProvider.new token, token_type

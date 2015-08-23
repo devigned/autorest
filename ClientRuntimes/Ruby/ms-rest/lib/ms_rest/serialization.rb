@@ -14,7 +14,7 @@ module MsRest
     # @return [Date] deserialized Date object.
     def self.deserialize_date(string_value)
       result = Timeliness.parse(string_value, :strict => true)
-      fail DeserializationError.new('Error occured in deserializing the response', nil, nil, string_value) if result.nil?
+      fail DeserializationError.new('Error occurred in deserializing the response', nil, nil, string_value) if result.nil?
       return ::Date.parse(result.to_s)
     end
   end
